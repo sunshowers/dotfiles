@@ -5,6 +5,8 @@
 	aa = commit --amend -a --no-edit
 	a = commit --amend
 	rc = rebase --continue
+	rx = rebase -x
+	rxf = rebase -x cargo xfmt
 	ce = commit --allow-empty -m \"Empty commit\"
 	c = commit
 	redate = !env EDITOR=true git rebase -i -x 'git commit --amend --reset-author' $(__detect_git_base)
@@ -13,3 +15,13 @@
 
 [core]
 	excludesFile = "~/.gitignore-home"
+[init]
+	defaultBranch = main
+[safe]
+	directory = /home/rain/dev/mold
+[tag]
+	gpgsign = true
+[gpg "x509"]
+	program = gitsign
+[gpg]
+	format = x509

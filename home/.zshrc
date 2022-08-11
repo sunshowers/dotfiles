@@ -93,3 +93,6 @@ alias ccc='cargo check --all-targets'
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# TODO: test this out
+#fpath=(/opt/cargo/zsh-completions $fpath)
