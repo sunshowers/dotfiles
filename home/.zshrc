@@ -91,6 +91,12 @@ export PATH=$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/bin:$HOME/homebrew/bin:/home
 # Cargo aliases
 alias ccc='cargo check --all-targets'
 
+# Enable direnv
+eval "$(direnv hook zsh)"
+
+# Use the git cli to fetch cargo
+export CARGO_NET_GIT_FETCH_WITH_CLI=1
+
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
