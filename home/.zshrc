@@ -95,7 +95,7 @@ alias ccc='cargo check --all-targets'
 eval "$(direnv hook zsh)"
 
 # Use the git cli to fetch cargo
-export CARGO_NET_GIT_FETCH_WITH_CLI=1
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
