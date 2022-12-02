@@ -12,7 +12,8 @@
 	redate = !env EDITOR=true git rebase -i -x 'git commit --amend --reset-author' $(__detect_git_base)
 [include]
     path = ~/.gitconfig.local
-
+[includeIf "gitdir:~/dev/oxide/"]
+    path = ~/.gitconfig.oxide
 [core]
 	excludesFile = "~/.gitignore-home"
 [init]
