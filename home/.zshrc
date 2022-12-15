@@ -13,7 +13,7 @@ function _dotfiles_scm_info {}
 [[ -f /opt/facebook/hg/share/scm-prompt.sh ]] && source /opt/facebook/hg/share/scm-prompt.sh
 
 setopt PROMPT_SUBST
-export PS1='%K{green}%n@%2m%k %B%F{cyan}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
+export PS1='%K{${bg_color:-$color_xanadu}}%n@%2m%k %B%F{magenta}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
 %F{green}$(_dotfiles_scm_info)%F{white}%# %b%f%k'
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
@@ -97,8 +97,13 @@ eval "$(direnv hook zsh)"
 # Use the git cli to fetch cargo
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
 
+# Some colors to use
+local color_xanadu="#7D938A"
+local color_english_red="#AF3E4D"
+
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # TODO: test this out
 #fpath=(/opt/cargo/zsh-completions $fpath)
+
