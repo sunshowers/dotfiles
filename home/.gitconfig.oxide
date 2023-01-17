@@ -1,2 +1,6 @@
 [user]
 	email = "rain@oxide.computer"
+[spr]
+	githubRemoteName = origin
+	branchPrefix = sunshowers/spr/
+	requireTestPlan = false
