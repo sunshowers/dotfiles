@@ -74,12 +74,8 @@ function _sourcebk() {
 	fi
 }
 
-_sourcebk ~/.iterm2_shell_integration.zsh .iterm2_shell_integration.zsh
 _sourcebk /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 _sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh zsh-history-substring-search.zsh
-
-# added by travis gem
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # history up and down
 bindkey '^[[A' history-substring-search-up
@@ -106,6 +102,5 @@ local color_english_red="#AF3E4D"
 
 # TODO: test this out
 #fpath=(/opt/cargo/zsh-completions $fpath)
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

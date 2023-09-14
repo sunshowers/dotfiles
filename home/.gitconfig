@@ -30,3 +30,6 @@
 	connectorID = https://github.com/login/oauth
 [rebase]
 	updateRefs = true
+[user]
+	email = rain@sunshowers.io
+	name = Rain
