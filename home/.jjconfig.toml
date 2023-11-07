@@ -1,0 +1,23 @@
+[user]
+name = "Rain"
+email = "rain@sunshowers.io"
+
+[ui]
+default-command = "sl"
+
+[aliases]
+sl = ["log", "-r", "open()"]
+slog = ["log", "-r", "open()", "-T", "builtin_log_detailed"]
+sq = ["squash"]
+
+[revsets]
+# log = 'open()'
+
+[git]
+auto-local-branch = false
+
+[revset-aliases]
+'open()' = 'author("rain@") ~ ::remote_branches() | immutable_heads() | @ | @-'
+
+[templates]
+log = 'builtin_log_comfortable'

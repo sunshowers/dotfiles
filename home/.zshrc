@@ -107,3 +107,5 @@ local color_english_red="#AF3E4D"
 # TODO: test this out
 #fpath=(/opt/cargo/zsh-completions $fpath)
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

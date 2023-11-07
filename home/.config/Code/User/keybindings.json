@@ -82,5 +82,18 @@
         "key": "escape",
         "command": "workbench.view.explorer",
         "when": "searchViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+alt+q",
+        "command": "workbench.action.quit"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
     }
 ]
