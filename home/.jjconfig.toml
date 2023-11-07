@@ -17,7 +17,12 @@ sq = ["squash"]
 auto-local-branch = false
 
 [revset-aliases]
-'open()' = 'author("rain@") ~ ::remote_branches() | immutable_heads() | ancestors(@,3)'
+'open()' = '''
+    author("rain@")
+      ~ ::(remote_branches() ~ remote_branches(remote=exact:"git"))
+      | immutable_heads()
+      | ancestors(@,3)
+'''
 
 [templates]
 log = 'builtin_log_comfortable'
