@@ -17,7 +17,7 @@ sq = ["squash"]
 auto-local-branch = false
 
 [revset-aliases]
-'open()' = 'author("rain@") ~ ::remote_branches() | immutable_heads() | @ | @-'
+'open()' = 'author("rain@") ~ ::remote_branches() | immutable_heads() | ancestors(@,3)'
 
 [templates]
 log = 'builtin_log_comfortable'
