@@ -21,14 +21,15 @@ auto-local-branch = false
 # We're uninterested in remote branches from origin etc, and their ancestors. But we *are*
 # interested in @git remote branches.
 #
-# What if a commit is present in both @git and a remote branch? In that case we're interested in the
-# commit.
+# What if a commit is present in both @git and a remote branch? In that case we are interested in
+# the commit. In the below computation, the commit is present in both `remote_branches()` and
+# `git_branches()`, and so it is not part of `uninterested()`. This is the desired behavior.
 'git_branches()' = 'remote_branches(remote=exact:"git")'
 'uninterested()' = '::(remote_branches() ~ git_branches())'
 'mine()' = 'author("rain@") | author("rain1@")'
-'interested_heads()' = 'mine() ~ uninterested()'
+'interested()' = 'mine() ~ uninterested()'
 'open()' = '''
-    ancestors(interested_heads(), 2)
+    ancestors(interested(), 2)
       | (immutable_heads() ~ tags())
       | ancestors(@, 2)
 '''
