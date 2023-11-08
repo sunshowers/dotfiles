@@ -18,6 +18,8 @@ sq = ["squash"]
 auto-local-branch = false
 
 [revset-aliases]
+# See https://github.com/martinvonz/jj/blob/main/docs/revsets.md
+#
 # We're uninterested in remote branches from origin etc, and their ancestors. But we *are*
 # interested in @git remote branches.
 #
