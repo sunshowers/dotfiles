@@ -20,14 +20,21 @@ auto-local-branch = false
 [revset-aliases]
 # See https://github.com/martinvonz/jj/blob/main/docs/revsets.md
 #
-# We're uninterested in remote branches from origin etc, and their ancestors. But we *are*
-# interested in @git remote branches.
+# We're uninterested in remote branches from origin etc, and their ancestors, as well as tags (which
+# might or might not be ancestors of remote_branches()). But we *are* interested in @git remote
+# branches.
 #
 # What if a commit is present in both @git and a remote branch? In that case we are interested in
 # the commit. In the below computation, the commit is present in both `remote_branches()` and
 # `git_branches()`, and so it is not part of `uninterested()`. This is the desired behavior.
+#
+# Note that `git_branches()` in a git colocated repo is exactly the same as `branches()`, but we
+# specify it this way for explicitness.
+#
+# Excluding git_branches will no longer be necessary with jj 0.12.0:
+# https://github.com/martinvonz/jj/pull/2540
 'git_branches()' = 'remote_branches(remote=exact:"git")'
-'uninterested()' = '::(remote_branches() ~ git_branches())'
+'uninterested()' = '::(remote_branches() ~ git_branches()) | tags()'
 'mine()' = 'author("rain@") | author("rain1@")'
 'interested()' = 'mine() ~ uninterested()'
 'open()' = '''
