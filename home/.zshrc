@@ -104,3 +104,12 @@ local color_english_red="#AF3E4D"
 #fpath=(/opt/cargo/zsh-completions $fpath)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Nix has highest priority
+export PATH="$HOME/.nix-profile/bin:$PATH"
+
+if [[ -e /run/current-system/sw/share/nix-direnv/direnvrc ]]; then
+    source /run/current-system/sw/share/nix-direnv/direnvrc
+elif [[ -e $HOME/.nix-profile/share/nix-direnv/direnvrc ]]; then
+    source $HOME/.nix-profile/share/nix-direnv/direnvrc
+fi
