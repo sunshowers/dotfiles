@@ -4,9 +4,11 @@ email = "rain@sunshowers.io"
 
 [ui]
 default-command = "sl"
-diff.tool = ["difft", "--color=always", "$left", "$right"]
+#diff.tool = ["difft", "--color=always", "$left", "$right"]
 
 [aliases]
+aa = ["amend"]
+a = ["describe", "@-"]
 sl = ["log", "-r", "open()"]
 slog = ["log", "-r", "open()", "-T", "builtin_log_detailed"]
 sq = ["squash"]
@@ -33,8 +35,7 @@ auto-local-branch = false
 #
 # Excluding git_branches will no longer be necessary with jj 0.12.0:
 # https://github.com/martinvonz/jj/pull/2540
-'git_branches()' = 'remote_branches(remote=exact:"git")'
-'uninterested()' = '::(remote_branches() ~ git_branches()) | tags()'
+'uninterested()' = '::remote_branches() | tags()'
 'mine()' = 'author("rain@") | author("rain1@")'
 'interested()' = 'mine() ~ uninterested()'
 'open()' = '''
