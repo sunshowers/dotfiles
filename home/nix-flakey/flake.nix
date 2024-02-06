@@ -39,6 +39,7 @@
           paths = with pkgs; [
             direnv
             hello
+            htop
             nix-direnv
           ];
         };
