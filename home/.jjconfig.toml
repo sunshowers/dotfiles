@@ -16,18 +16,15 @@ sq = ["squash"]
 [revsets]
 # log = 'open()'
 
-[git]
-auto-local-branch = false
-
 [revset-aliases]
 # See https://github.com/martinvonz/jj/blob/main/docs/revsets.md
 'uninterested()' = '::remote_branches() | tags()'
 'mine()' = 'author("rain@") | author("rain1@")'
 'interested()' = 'mine() ~ uninterested()'
 'open()' = '''
-    ancestors(interested(), 2)
+    ancestors(interested(), 3)
       | (immutable_heads() ~ tags())
-      | ancestors(@, 2)
+      | ancestors(@, 3)
 '''
 
 [templates]
