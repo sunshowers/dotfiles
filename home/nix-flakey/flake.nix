@@ -37,10 +37,15 @@
           # Specifies things to pin in the flake registry and in NIX_PATH.
           pinned = { nixpkgs = toString nixpkgs; };
           paths = with pkgs; [
+            aria2
+            carapace
             direnv
             hello
             htop
+            iperf
+            ipmitool
             nix-direnv
+            nmap
           ];
         };
       });

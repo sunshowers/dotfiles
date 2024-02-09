@@ -96,6 +96,7 @@ export CARGO_NET_GIT_FETCH_WITH_CLI=true
 # Some colors to use
 local color_xanadu="#7D938A"
 local color_english_red="#AF3E4D"
+local color_vine_green="#34B233"
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
@@ -113,3 +114,4 @@ if [[ -e /run/current-system/sw/share/nix-direnv/direnvrc ]]; then
 elif [[ -e $HOME/.nix-profile/share/nix-direnv/direnvrc ]]; then
     source $HOME/.nix-profile/share/nix-direnv/direnvrc
 fi
+. "/opt/cargo/env"
