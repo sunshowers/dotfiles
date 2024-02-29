@@ -87,24 +87,16 @@ export PATH=$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/go/bin:$HOME/bin:$HOME/.loca
 # Cargo aliases
 alias ccc='cargo check --all-targets'
 
-# Enable direnv
-eval "$(direnv hook zsh)"
-
-# Use the git cli to fetch cargo
-export CARGO_NET_GIT_FETCH_WITH_CLI=true
+# Enable direnv if available
+command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
 
 # Some colors to use
 local color_xanadu="#7D938A"
 local color_english_red="#AF3E4D"
 local color_vine_green="#34B233"
 
-# local overrides (MUST BE AT THE END)
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
 # TODO: test this out
 #fpath=(/opt/cargo/zsh-completions $fpath)
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Nix has highest priority
 export PATH="$HOME/.nix-profile/bin:$PATH"
@@ -115,3 +107,6 @@ elif [[ -e $HOME/.nix-profile/share/nix-direnv/direnvrc ]]; then
     source $HOME/.nix-profile/share/nix-direnv/direnvrc
 fi
 . "/opt/cargo/env"
+
+# local overrides (MUST BE AT THE END)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
