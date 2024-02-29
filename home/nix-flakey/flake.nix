@@ -38,6 +38,7 @@
           pinned = { nixpkgs = toString nixpkgs; };
           paths = with pkgs; [
             aria2
+            atuin
             carapace
             direnv
             hello
