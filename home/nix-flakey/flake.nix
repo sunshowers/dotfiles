@@ -40,13 +40,16 @@
             aria2
             atuin
             carapace
+            cosign
             direnv
             hello
             htop
             iperf
             ipmitool
+            magic-wormhole
             nix-direnv
             nmap
+            python311Packages.fonttools
           ];
         };
       });

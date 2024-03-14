@@ -8,6 +8,7 @@ default-command = "sl"
 
 [aliases]
 aa = ["amend"]
+bs = ["branch", "set", "-r", "@-"]
 a = ["describe", "@-"]
 sl = ["log", "-r", "open()"]
 slog = ["log", "-r", "open()", "-T", "builtin_log_detailed"]
