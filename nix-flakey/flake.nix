@@ -46,6 +46,7 @@
             htop
             iperf
             ipmitool
+            jupyter
             magic-wormhole
             nix-direnv
             nmap

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+WEZTERM_UNIX_SOCKET=/run/user/$UID/wezterm/x11-:1-org.wezfurlong.wezterm
+
+echo_err() {
+  echo "[wezterm-gui-mux]" "$@" 1>&2
+}
+
+# If this socket exists, export it.
+if [ -S $WEZTERM_UNIX_SOCKET ]; then
+  echo_err "Using wezterm GUI socket at $WEZTERM_UNIX_SOCKET"
+  export WEZTERM_UNIX_SOCKET
+else
+  echo_err "No wezterm GUI socket found at $WEZTERM_UNIX_SOCKET, starting new instance"
+fi
+
+wezterm $*
