@@ -10,6 +10,7 @@ default-command = "sl"
 a = ["describe", "@-"]
 aa = ["amend"]
 bc = ["branch", "create", "-r", "@-"]
+bd = ["branch", "delete"]
 bs = ["branch", "set", "-r", "@-"]
 bt = ["branch", "track"]
 gp = ["git", "push"]
