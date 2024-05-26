@@ -51,6 +51,7 @@
             nix-direnv
             nmap
             python311Packages.fonttools
+            wget2
           ];
         };
       });
