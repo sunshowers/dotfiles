@@ -42,6 +42,7 @@
             carapace
             cosign
             direnv
+            gh
             hello
             htop
             iperf
