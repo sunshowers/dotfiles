@@ -43,6 +43,7 @@
             cosign
             direnv
             gh
+            git
             hello
             htop
             iperf
@@ -52,6 +53,7 @@
             nix-direnv
             nmap
             python311Packages.fonttools
+            python312Packages.git-filter-repo
             wget2
           ];
         };
