@@ -54,6 +54,7 @@
             nmap
             python311Packages.fonttools
             python312Packages.git-filter-repo
+            ripgrep
             wget2
           ];
         };
