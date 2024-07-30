@@ -23,6 +23,9 @@ HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=~/.zsh_history
 
+# Make M-f and M-b better
+export WORDCHARS='_'
+
 # Use modern completion system
 autoload -Uz compinit
 compinit
