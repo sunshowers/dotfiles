@@ -20,6 +20,7 @@ s = ["show", "@-"]
 sl = ["log", "-r", "open()"]
 slog = ["log", "-r", "open()", "-T", "builtin_log_detailed"]
 sq = ["squash"]
+"sq-" = ["squash", "-r", "@-"]
 
 [revsets]
 # log = 'open()'
