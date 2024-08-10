@@ -29,11 +29,12 @@ sq = ["squash"]
 [revset-aliases]
 # See https://github.com/martinvonz/jj/blob/main/docs/revsets.md
 'uninterested()' = '::remote_branches() | tags()'
+'spr_branches()' = 'remote_branches(glob:"sunshowers/spr/*")'
 'mine()' = 'author("rain@") | author("rain1@")'
 'interested()' = 'mine() ~ uninterested()'
 'open()' = '''
     ancestors(interested(), 3)
-      | (immutable_heads() ~ tags())
+      | (immutable_heads() ~ tags() ~ ::spr_branches())
       | ancestors(@, 3)
 '''
 
