@@ -24,7 +24,7 @@ sq = ["squash"]
 "sq-" = ["squash", "-r", "@-"]
 
 [revsets]
-# log = 'open()'
+#log = 'open()'
 
 [revset-aliases]
 # See https://github.com/martinvonz/jj/blob/main/docs/revsets.md
@@ -34,7 +34,7 @@ sq = ["squash"]
 'interested()' = 'mine() ~ uninterested()'
 'open()' = '''
     ancestors(interested(), 3)
-      | (immutable_heads() ~ tags() ~ ::spr_branches())
+      | tracked_remote_branches()
       | ancestors(@, 3)
 '''
 
