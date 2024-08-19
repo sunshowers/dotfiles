@@ -52,6 +52,7 @@
             magic-wormhole
             nix-direnv
             nmap
+            oh-my-posh
             python311Packages.fonttools
             python312Packages.git-filter-repo
             ripgrep
