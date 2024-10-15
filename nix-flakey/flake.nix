@@ -44,6 +44,7 @@
             direnv
             gh
             git
+            gnuplot
             hello
             htop
             iperf

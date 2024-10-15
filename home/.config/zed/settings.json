@@ -22,5 +22,38 @@
     "show": false
   },
   "use_system_path_prompts": false,
-  "cursor_blink": false
+  "cursor_blink": false,
+  "ssh_connections": [
+    {
+      "host": "sunshowers-illumos.echoes",
+      "projects": [
+        {
+          "paths": [
+            "~/dev"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/oxide/omicron"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "sunshowers-illumos.echoes",
+      "projects": []
+    },
+    {
+      "host": "sunshowers-illumos.echoes",
+      "projects": []
+    },
+    {
+      "host": "sunshowers-illumos.echoes",
+      "projects": []
+    },
+    {
+      "host": "sunshowers-illumos.echoes",
+      "projects": []
+    }
+  ]
 }

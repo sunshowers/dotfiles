@@ -9,10 +9,10 @@ default-command = "sl"
 [aliases]
 a = ["describe", "@-"]
 aa = ["amend"]
-bc = ["branch", "create", "-r", "@-"]
-bd = ["branch", "delete"]
-bs = ["branch", "set", "-r", "@-"]
-bt = ["branch", "track"]
+bc = ["bookmark", "create", "-r", "@-"]
+bd = ["bookmark", "delete"]
+bs = ["bookmark", "set", "-r", "@-"]
+bt = ["bookmark", "track"]
 gf = ["git", "fetch"]
 gfm = ["git", "fetch", "--remote", "mine"]
 gp = ["git", "push"]
@@ -31,13 +31,13 @@ sq = ["squash"]
 
 [revset-aliases]
 # See https://github.com/martinvonz/jj/blob/main/docs/revsets.md
-'uninterested()' = '::remote_branches() | tags()'
-'spr_branches()' = 'remote_branches(glob:"sunshowers/spr/*")'
+'uninterested()' = '::remote_bookmarks() | tags()'
+'spr_branches()' = 'remote_bookmarks(glob:"sunshowers/spr/*")'
 'mine()' = 'author("rain@") | author("rain1@")'
 'interested()' = 'mine() ~ uninterested()'
 'open()' = '''
     ancestors(interested(), 3)
-      | tracked_remote_branches()
+      | tracked_remote_bookmarks()
       | ancestors(@, 3)
 '''
 
