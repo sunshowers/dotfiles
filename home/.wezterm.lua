@@ -1,5 +1,21 @@
 local wezterm = require 'wezterm';
 
+wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
+  local zoomed = ''
+  if tab.active_pane.is_zoomed then
+    zoomed = '[Z] '
+  end
+
+  local index = ''
+  if #tabs > 1 then
+    index = string.format('WezTerm [%d/%d] ', tab.tab_index + 1, #tabs)
+  else
+    index = 'WezTerm '
+  end
+
+  return zoomed .. index .. tab.active_pane.title
+end)
+
 local config = {
   font = wezterm.font("Noto Sans Mono Rain 95", { weight = "Medium" }),
   color_scheme = "lovelace",

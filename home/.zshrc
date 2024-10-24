@@ -13,8 +13,11 @@ function _dotfiles_scm_info {}
 [[ -f /opt/facebook/hg/share/scm-prompt.sh ]] && source /opt/facebook/hg/share/scm-prompt.sh
 
 setopt PROMPT_SUBST
-export PS1='%K{${bg_color:-$color_xanadu}}%n@%2m%k %B%F{magenta}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
+local prompt_hostname="$HOSTNAME${CONTAINER_ID:+ $CONTAINER_ID}"
+PS1='%K{${bg_color:-$color_xanadu}}%n@${prompt_hostname}%k %B%F{magenta}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
 %F{green}$(_dotfiles_scm_info)%F{white}%# %b%f%k'
+# precmd_functions+=(__prompt)
+
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
@@ -84,7 +87,7 @@ _sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-se
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-export PATH=$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/go/bin:$HOME/bin:$HOME/.local/bin:$HOME/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=$HOME/.cargo/bin:/opt/cargo/bin:$HOME/.cabal/bin:$HOME/go/bin:$HOME/bin:$HOME/.local/bin:$HOME/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:$PATH
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
 
 # Cargo aliases
@@ -109,6 +112,11 @@ if [[ -e /run/current-system/sw/share/nix-direnv/direnvrc ]]; then
 elif [[ -e $HOME/.nix-profile/share/nix-direnv/direnvrc ]]; then
     source $HOME/.nix-profile/share/nix-direnv/direnvrc
 fi
+
+if (( $+commands[atuin] )) ; then
+    eval "$(atuin init zsh --disable-up-arrow)"
+fi
+
 . "/opt/cargo/env"
 
 # local overrides (MUST BE AT THE END)
