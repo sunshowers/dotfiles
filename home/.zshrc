@@ -74,6 +74,10 @@ _sourcebk zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 _sourcebk zsh-history-substring-search.zsh
 _sourcebk wezterm.sh
 
+ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)
+typeset -A ZSH_HIGHLIGHT_PATTERNS
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=black,bold,bg=red')
+
 # history up and down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
