@@ -30,6 +30,24 @@ local config = {
         key = 't',
         mods = 'CTRL|ALT',
         action = wezterm.action.ShowLauncher
+    }, {
+        key = 'UpArrow',
+        mods = 'SHIFT',
+        action = wezterm.action.ScrollToPrompt(-1)
+    }, {
+        key = 'DownArrow',
+        mods = 'SHIFT',
+        action = wezterm.action.ScrollToPrompt(1)
+    }},
+    mouse_bindings = {{
+        event = {
+            Down = {
+                streak = 3,
+                button = 'Left'
+            }
+        },
+        action = wezterm.action.SelectTextAtMouseCursor 'SemanticZone',
+        mods = 'NONE'
     }},
     send_composed_key_when_left_alt_is_pressed = false,
     scrollback_lines = 5000,

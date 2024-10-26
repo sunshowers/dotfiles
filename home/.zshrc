@@ -3,19 +3,11 @@
 autoload -Uz promptinit
 promptinit
 
-setopt histignorealldups sharehistory chasedots autopushd
+setopt histignorealldups sharehistory chasedots autopushd PROMPT_SUBST
 
-# Define a default dotfiles info in case the below files aren't available.
-function _dotfiles_scm_info {}
-
-[[ -f /usr/facebook/ops/rc/master.zshrc ]] && source /usr/facebook/ops/rc/master.zshrc
-[[ -f /usr/share/scm/scm-prompt.sh ]] && source /usr/share/scm/scm-prompt.sh
-[[ -f /opt/facebook/hg/share/scm-prompt.sh ]] && source /opt/facebook/hg/share/scm-prompt.sh
-
-setopt PROMPT_SUBST
 local prompt_container_id="${CONTAINER_ID:+ %U$CONTAINER_ID%u}"
 PS1='%K{${bg_color:-$color_xanadu}}%n@${HOSTNAME}%k${prompt_container_id} %B%F{magenta}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
-%F{green}$(_dotfiles_scm_info)%F{white}%# %b%f%k'
+%F{green}%F{white}%# %b%f%k'
 # precmd_functions+=(__prompt)
 
 # Use emacs keybindings even if our EDITOR is set to vi
@@ -52,7 +44,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias m=mosh --ssh="ssh -a"
 
-
 function precmd() {
 	print -Pn "\033]0;%~\007"
 }
@@ -70,18 +61,18 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 (( $+commands[rbenv] )) && eval "$(rbenv init -)"
 
 function _sourcebk() {
-	# grab the backup version of the script from within the dotfiles directory
+	# Source the helper script from within the dotfiles directory. This used to be "backup" but we
+	# now just use our repo's version as authoritative.
 	local zshrc_loc="$(readlink ~/.zshrc)"
-	local bk="$HOME/${zshrc_loc:h:h}/bk/$2"
-	if [[ -f "$1" ]]; then
-		source "$1"
-	elif [[ -f "$bk" ]]; then
+	local bk="$HOME/${zshrc_loc:h:h}/bk/$1"
+	if [[ -f "$bk" ]]; then
 		source "$bk"
 	fi
 }
 
-_sourcebk /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-_sourcebk /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh zsh-history-substring-search.zsh
+_sourcebk zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+_sourcebk zsh-history-substring-search.zsh
+_sourcebk wezterm.sh
 
 # history up and down
 bindkey '^[[A' history-substring-search-up
