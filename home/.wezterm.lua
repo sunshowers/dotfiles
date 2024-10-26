@@ -26,6 +26,11 @@ local config = {
     freetype_load_target = "HorizontalLcd",
     harfbuzz_features = {},
     initial_cols = 180,
+    keys = {{
+        key = 't',
+        mods = 'CTRL|ALT',
+        action = wezterm.action.ShowLauncher
+    }},
     send_composed_key_when_left_alt_is_pressed = false,
     scrollback_lines = 5000,
     ssh_domains = {{
@@ -34,12 +39,7 @@ local config = {
         username = "rain",
         override_proxy_command = "wezterm cli --no-auto-start proxy"
     }},
-    ui_key_cap_rendering = "Emacs",
-    keys = {{
-        key = 't',
-        mods = 'CTRL|ALT',
-        action = wezterm.action.ShowLauncher
-    }}
+    ui_key_cap_rendering = "Emacs"
 };
 
 local hostname = wezterm.hostname()
