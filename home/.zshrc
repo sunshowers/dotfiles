@@ -13,8 +13,8 @@ function _dotfiles_scm_info {}
 [[ -f /opt/facebook/hg/share/scm-prompt.sh ]] && source /opt/facebook/hg/share/scm-prompt.sh
 
 setopt PROMPT_SUBST
-local prompt_hostname="$HOSTNAME${CONTAINER_ID:+ $CONTAINER_ID}"
-PS1='%K{${bg_color:-$color_xanadu}}%n@${prompt_hostname}%k %B%F{magenta}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
+local prompt_container_id="${CONTAINER_ID:+ %U$CONTAINER_ID%u}"
+PS1='%K{${bg_color:-$color_xanadu}}%n@${HOSTNAME}%k${prompt_container_id} %B%F{magenta}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
 %F{green}$(_dotfiles_scm_info)%F{white}%# %b%f%k'
 # precmd_functions+=(__prompt)
 
@@ -100,6 +100,7 @@ command -v direnv &>/dev/null && eval "$(direnv hook zsh)"
 local color_xanadu="#7D938A"
 local color_english_red="#AF3E4D"
 local color_vine_green="#34B233"
+local color_midnight_green="#004953"
 
 # TODO: test this out
 #fpath=(/opt/cargo/zsh-completions $fpath)
