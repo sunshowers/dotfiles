@@ -44,9 +44,11 @@
             direnv
             gh
             git
+            gitsign
             gnuplot
             hello
             htop
+            hugo
             iperf
             ipmitool
             jupyter
@@ -57,6 +59,7 @@
             python311Packages.fonttools
             python312Packages.git-filter-repo
             ripgrep
+            step-cli
             uv
             wget2
           ];

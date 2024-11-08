@@ -5,8 +5,13 @@ promptinit
 
 setopt histignorealldups sharehistory chasedots autopushd PROMPT_SUBST
 
-local prompt_container_id="${CONTAINER_ID:+ %U$CONTAINER_ID%u}"
-PS1='%K{${bg_color:-$color_xanadu}}%n@${HOSTNAME}%k${prompt_container_id} %B%F{magenta}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
+if [[ -f "/run/.containerenv" ]]; then
+    local container_name="$(grep "name=" /run/.containerenv | cut -d'=' -f2- | tr -d '"')"
+fi
+
+local prompt_container_id="${container_name:+ %U$container_name%u}"
+
+PS1='%K{${bg_color:-$color_xanadu}}%n@${HOST}%k${prompt_container_id} %B%F{magenta}%(4~|...|)%3~ %f%b{%F{yellow}%T%f} [%F{yellow}%?%f]
 %F{green}%F{white}%# %b%f%k'
 # precmd_functions+=(__prompt)
 
@@ -82,8 +87,17 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=black,bold,bg=red')
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-export PATH=$HOME/.cargo/bin:/opt/cargo/bin:$HOME/.cabal/bin:$HOME/go/bin:$HOME/bin:$HOME/.local/bin:$HOME/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=$HOME/.cargo/bin:/opt/cargo/bin:$HOME/.cabal/bin:$HOME/go/bin:$HOME/bin:$HOME/.local/bin:$PATH
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
+
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    # https://nixos.wiki/wiki/Locales
+    export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+if [[ -e $HOME/.nix-profile/share/nix-direnv/direnvrc ]]; then
+    source $HOME/.nix-profile/share/nix-direnv/direnvrc
+fi
 
 # Cargo aliases
 alias ccc='cargo check --all-targets'
@@ -99,15 +113,6 @@ local color_midnight_green="#004953"
 
 # TODO: test this out
 #fpath=(/opt/cargo/zsh-completions $fpath)
-
-# Nix has highest priority
-export PATH="$HOME/.nix-profile/bin:$PATH"
-
-if [[ -e /run/current-system/sw/share/nix-direnv/direnvrc ]]; then
-    source /run/current-system/sw/share/nix-direnv/direnvrc
-elif [[ -e $HOME/.nix-profile/share/nix-direnv/direnvrc ]]; then
-    source $HOME/.nix-profile/share/nix-direnv/direnvrc
-fi
 
 if (( $+commands[atuin] )) ; then
     eval "$(atuin init zsh --disable-up-arrow)"

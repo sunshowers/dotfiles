@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
   "base_keymap": "VSCode",
   "buffer_font_family": "Noto Sans Mono Rain 95",
   "buffer_font_weight": 500,
@@ -16,7 +28,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine Moon"
+    "dark": "Rosé Pine"
   },
   "tab_bar": {
     "show": false
@@ -28,32 +40,50 @@
       "host": "sunshowers-illumos.echoes",
       "projects": [
         {
-          "paths": [
-            "~/dev"
-          ]
+          "paths": ["~/dev"]
         },
         {
-          "paths": [
-            "~/dev/oxide/omicron"
-          ]
+          "paths": ["~/dev/oxide/omicron"]
         }
       ]
     },
     {
-      "host": "sunshowers-illumos.echoes",
-      "projects": []
-    },
-    {
-      "host": "sunshowers-illumos.echoes",
-      "projects": []
-    },
-    {
-      "host": "sunshowers-illumos.echoes",
-      "projects": []
-    },
-    {
-      "host": "sunshowers-illumos.echoes",
-      "projects": []
+      "host": "sunshowers-linux-dev",
+      "projects": [
+        {
+          "paths": ["~/dev/guppy"]
+        },
+        {
+          "paths": ["~/dev/ipc-channel"]
+        },
+        {
+          "paths": ["~/dev/libc"]
+        },
+        {
+          "paths": ["~/dev/nextest-rs/nextest"]
+        },
+        {
+          "paths": ["~/dev/oxide"]
+        },
+        {
+          "paths": ["~/dev/oxide/dropshot"]
+        },
+        {
+          "paths": ["~/dev/oxide/falcon"]
+        },
+        {
+          "paths": ["~/dev/oxide/newtype-uuid"]
+        },
+        {
+          "paths": ["~/dev/oxide/omicron"]
+        },
+        {
+          "paths": ["~/dev/oxide/rfd"]
+        },
+        {
+          "paths": ["~/dev/wasmtime"]
+        }
+      ]
     }
   ]
 }

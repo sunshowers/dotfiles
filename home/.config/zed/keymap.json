@@ -18,7 +18,10 @@
       "ctrl-a": "editor::MoveToBeginningOfLine",
       "ctrl-e": "editor::MoveToEndOfLine",
       "alt-f": "editor::MoveToNextWordEnd",
-      "alt-b": "editor::MoveToPreviousWordStart"
+      "alt-b": "editor::MoveToPreviousWordStart",
+      "alt-q": "editor::Rewrap",
+      "ctrl-tab": "pane::GoBack",
+      "ctrl-shift-tab": "pane::GoForward"
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }
   }
