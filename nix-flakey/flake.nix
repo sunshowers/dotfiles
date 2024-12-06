@@ -55,6 +55,7 @@
             magic-wormhole
             nix-direnv
             nmap
+            nodejs
             oh-my-posh
             python311Packages.fonttools
             python312Packages.git-filter-repo

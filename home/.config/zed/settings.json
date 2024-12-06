@@ -33,6 +33,13 @@
   "tab_bar": {
     "show": false
   },
+  "lsp": {
+    "rust-analyzer": {
+      "binary": {
+        "ignore_system_version": true
+      }
+    }
+  },
   "use_system_path_prompts": false,
   "cursor_blink": false,
   "ssh_connections": [
@@ -40,10 +47,14 @@
       "host": "sunshowers-illumos.echoes",
       "projects": [
         {
-          "paths": ["~/dev"]
+          "paths": [
+            "~/dev"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/omicron"]
+          "paths": [
+            "~/dev/oxide/omicron"
+          ]
         }
       ]
     },
@@ -51,37 +62,89 @@
       "host": "sunshowers-linux-dev",
       "projects": [
         {
-          "paths": ["~/dev/guppy"]
+          "paths": [
+            "~/dev/guppy"
+          ]
         },
         {
-          "paths": ["~/dev/ipc-channel"]
+          "paths": [
+            "~/dev/indent-write"
+          ]
         },
         {
-          "paths": ["~/dev/libc"]
+          "paths": [
+            "~/dev/ipc-channel"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/nextest"]
+          "paths": [
+            "~/dev/libc"
+          ]
         },
         {
-          "paths": ["~/dev/oxide"]
+          "paths": [
+            "~/dev/nextest-rs/mukti"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/dropshot"]
+          "paths": [
+            "~/dev/nextest-rs/nextest"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/falcon"]
+          "paths": [
+            "~/dev/nextest-rs/quick-junit"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/newtype-uuid"]
+          "paths": [
+            "~/dev/oxide"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/omicron"]
+          "paths": [
+            "~/dev/oxide/dropshot"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/rfd"]
+          "paths": [
+            "~/dev/oxide/falcon"
+          ]
         },
         {
-          "paths": ["~/dev/wasmtime"]
+          "paths": [
+            "~/dev/oxide/newtype-uuid"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/oxide/omicron"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/oxide/rfd"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/spr"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/sunshowers-io"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/tokio"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/wasmtime"
+          ]
         }
       ]
     }
