@@ -51,6 +51,7 @@
             hugo
             iperf
             ipmitool
+            jq
             jupyter
             magic-wormhole
             nix-direnv

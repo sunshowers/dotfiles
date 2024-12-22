@@ -83,6 +83,11 @@
         },
         {
           "paths": [
+            "~/dev/nextest-rs/datatest-stable"
+          ]
+        },
+        {
+          "paths": [
             "~/dev/nextest-rs/mukti"
           ]
         },
@@ -103,6 +108,11 @@
         },
         {
           "paths": [
+            "~/dev/oxide/cyclonedx-rust-cargo"
+          ]
+        },
+        {
+          "paths": [
             "~/dev/oxide/dropshot"
           ]
         },
@@ -119,6 +129,11 @@
         {
           "paths": [
             "~/dev/oxide/omicron"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/oxide/omicron-package"
           ]
         },
         {
