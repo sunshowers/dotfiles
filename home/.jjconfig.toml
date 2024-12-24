@@ -3,7 +3,8 @@ name = "Rain"
 email = "rain@sunshowers.io"
 
 [ui]
-default-command = "sl"
+default-command = "log"
+#default-command = "sl"
 #diff.tool = ["difft", "--color=always", "$left", "$right"]
 
 [aliases]

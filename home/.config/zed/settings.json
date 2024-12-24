@@ -10,7 +10,7 @@
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "claude-3-5-sonnet"
     },
     "version": "2"
   },
@@ -28,7 +28,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine"
+    "dark": "Gruvbox Dark"
   },
   "tab_bar": {
     "show": false
@@ -61,6 +61,11 @@
     {
       "host": "sunshowers-linux-dev",
       "projects": [
+        {
+          "paths": [
+            "~/dev/config-rs"
+          ]
+        },
         {
           "paths": [
             "~/dev/guppy"

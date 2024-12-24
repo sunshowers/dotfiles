@@ -53,6 +53,7 @@
             ipmitool
             jq
             jupyter
+            just
             magic-wormhole
             nix-direnv
             nmap
