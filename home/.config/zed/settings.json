@@ -55,10 +55,14 @@
       "host": "sunshowers-illumos.echoes",
       "projects": [
         {
-          "paths": ["~/dev"]
+          "paths": [
+            "~/dev"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/omicron"]
+          "paths": [
+            "~/dev/oxide/omicron"
+          ]
         }
       ]
     },
@@ -66,79 +70,134 @@
       "host": "sunshowers-linux-dev",
       "projects": [
         {
-          "paths": ["~/dev/config-rs"]
+          "paths": [
+            "~/dev/config-rs"
+          ]
         },
         {
-          "paths": ["~/dev/cyclonedx-rust-cargo"]
+          "paths": [
+            "~/dev/cyclonedx-rust-cargo"
+          ]
         },
         {
-          "paths": ["~/dev/guppy"]
+          "paths": [
+            "~/dev/guppy"
+          ]
         },
         {
-          "paths": ["~/dev/indent-write"]
+          "paths": [
+            "~/dev/indent-write"
+          ]
         },
         {
-          "paths": ["~/dev/ipc-channel"]
+          "paths": [
+            "~/dev/ipc-channel"
+          ]
         },
         {
-          "paths": ["~/dev/libc"]
+          "paths": [
+            "~/dev/libc"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/datatest-stable"]
+          "paths": [
+            "~/dev/nextest-rs/datatest-stable"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/mukti"]
+          "paths": [
+            "~/dev/nextest-rs/mukti"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/nextest"]
+          "paths": [
+            "~/dev/nextest-rs/nextest"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/quick-junit"]
+          "paths": [
+            "~/dev/nextest-rs/quick-junit"
+          ]
         },
         {
-          "paths": ["~/dev/oxide"]
+          "paths": [
+            "~/dev/oxide"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/crucible"]
+          "paths": [
+            "~/dev/oxide/crucible"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/cyclonedx-rust-cargo"]
+          "paths": [
+            "~/dev/oxide/cyclonedx-rust-cargo"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/dropshot"]
+          "paths": [
+            "~/dev/oxide/daft"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/falcon"]
+          "paths": [
+            "~/dev/oxide/dropshot"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/newtype-uuid"]
+          "paths": [
+            "~/dev/oxide/falcon"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/omicron"]
+          "paths": [
+            "~/dev/oxide/newtype-uuid"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/omicron-package"]
+          "paths": [
+            "~/dev/oxide/omicron"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/propolis"]
+          "paths": [
+            "~/dev/oxide/omicron-package"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/rfd"]
+          "paths": [
+            "~/dev/oxide/propolis"
+          ]
         },
         {
-          "paths": ["~/dev/paths0"]
+          "paths": [
+            "~/dev/oxide/rfd"
+          ]
         },
         {
-          "paths": ["~/dev/spr"]
+          "paths": [
+            "~/dev/paths0"
+          ]
         },
         {
-          "paths": ["~/dev/sunshowers-io"]
+          "paths": [
+            "~/dev/spr"
+          ]
         },
         {
-          "paths": ["~/dev/tokio"]
+          "paths": [
+            "~/dev/sunshowers-io"
+          ]
         },
         {
-          "paths": ["~/dev/wasmtime"]
+          "paths": [
+            "~/dev/tokio"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/wasmtime"
+          ]
         }
       ]
     }
