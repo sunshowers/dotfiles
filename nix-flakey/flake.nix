@@ -55,6 +55,7 @@
             jupyter
             just
             magic-wormhole
+            netcat-gnu
             nix-direnv
             nmap
             nodejs

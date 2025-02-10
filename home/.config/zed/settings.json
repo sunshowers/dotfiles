@@ -32,11 +32,11 @@
   "buffer_font_weight": 500,
   "ui_font_family": "Cantarell",
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": null,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruvbox Dark"
+    "dark": "Gruvbox Dark Hard"
   },
   "tab_bar": {
     "show": false
@@ -69,6 +69,16 @@
     {
       "host": "sunshowers-linux-dev",
       "projects": [
+        {
+          "paths": [
+            "~/dev/cargo-sync-rdme"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/cfg-expr"
+          ]
+        },
         {
           "paths": [
             "~/dev/config-rs"
@@ -187,6 +197,11 @@
         {
           "paths": [
             "~/dev/sunshowers-io"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/tishy"
           ]
         },
         {

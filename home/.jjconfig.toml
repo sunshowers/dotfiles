@@ -46,3 +46,8 @@ sq = ["squash"]
 
 [templates]
 log = 'builtin_log_comfortable'
+
+[[--scope]]
+--when.repositories = ["~/dev/oxide"]
+[--scope.user]
+email = "rain@oxide.computer"
