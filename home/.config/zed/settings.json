@@ -7,12 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "inline_completions": {
+  "edit_predictions": {
     "disabled_globs": [".env", "**/*.md"]
   },
   "languages": {
     "Markdown": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
     }
   },
   "assistant": {
@@ -112,6 +112,11 @@
         {
           "paths": [
             "~/dev/nextest-rs/datatest-stable"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/nextest-rs/future-queue"
           ]
         },
         {
