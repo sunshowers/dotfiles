@@ -42,7 +42,7 @@
 
 ## which filter mode to use
 ## possible values: global, host, session, directory
-# filter_mode = "global"
+filter_mode = "workspace"
 
 ## With workspace filtering enabled, Atuin will filter for commands executed
 ## in any directory within a git repository tree (default: false)
@@ -172,4 +172,4 @@ common_subcommands = [
 ]
 #
 # Set commands that should be totally stripped and ignored from stats
-common_prefix = ["sudo"]
+common_prefix = ["pfexec", "sudo"]
