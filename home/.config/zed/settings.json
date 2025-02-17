@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "edit_predictions": {
     "disabled_globs": [".env", "**/*.md"]
   },
@@ -32,7 +35,7 @@
   "buffer_font_weight": 500,
   "ui_font_family": "Cantarell",
   "ui_font_size": 16,
-  "buffer_font_size": null,
+  "buffer_font_size": 16.0,
   "theme": {
     "mode": "system",
     "light": "One Light",
