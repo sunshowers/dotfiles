@@ -40,3 +40,6 @@
 	helper = "!f() { /home/rain/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/node /tmp/vscode-remote-containers-14ce3cbc-baf5-4db6-9988-b1aa326316fd.js git-credential-helper $*; }; f"
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[merge "mergiraf"]
+    name = mergiraf
+    driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L

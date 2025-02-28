@@ -20,8 +20,8 @@
   },
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
@@ -184,6 +184,11 @@
         },
         {
           "paths": [
+            "~/dev/oxide/progenitor"
+          ]
+        },
+        {
+          "paths": [
             "~/dev/oxide/propolis"
           ]
         },
@@ -195,6 +200,16 @@
         {
           "paths": [
             "~/dev/paths0"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/pbt-examples"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/proptest-shrink-tests"
           ]
         },
         {
