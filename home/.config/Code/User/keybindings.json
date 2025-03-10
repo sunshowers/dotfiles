@@ -95,5 +95,9 @@
         "key": "ctrl+w",
         "command": "-workbench.action.terminal.killEditor",
         "when": "terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "settings.cycle.ultraZen",
     }
 ]

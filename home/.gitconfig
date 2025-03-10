@@ -1,3 +1,6 @@
+[user]
+	email = rain@sunshowers.io
+	name = Rain
 [alias]
 	st = status
 	r = !git rebase -i $(__detect_git_base)
@@ -30,9 +33,6 @@
 	connectorID = https://github.com/login/oauth
 [rebase]
 	updateRefs = true
-[user]
-	email = rain@sunshowers.io
-	name = Rain
 [spr]
 	branchPrefix = sunshowers/spr/
 	requireTestPlan = false
