@@ -199,6 +199,11 @@
         },
         {
           "paths": [
+            "~/dev/oxide/tufaceous"
+          ]
+        },
+        {
+          "paths": [
             "~/dev/paths0"
           ]
         },
