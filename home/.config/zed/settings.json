@@ -49,6 +49,25 @@
       "binary": {
         "ignore_system_version": true
       }
+    },
+    "initialization_options": {
+      "references": {
+        "excludeImports": true
+      },
+      "cachePriming": {
+        "enable": true
+      },
+      "completion": {
+        "privateEditable": {
+          "enable": true
+        }
+      },
+      "diagnostics": {
+        "enable": false,
+        "experimental": {
+          "enable": false
+        }
+      }
     }
   },
   "use_system_path_prompts": false,
