@@ -7,6 +7,9 @@ default-command = "log"
 #default-command = "sl"
 #diff.tool = ["difft", "--color=always", "$left", "$right"]
 
+[git]
+write-change-id-header = true
+
 [aliases]
 a = ["describe", "@-"]
 aa = ["amend"]

@@ -10,6 +10,18 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
+  "file_scan_exclusions": [
+    "**/.raintmp",
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings"
+  ],
   "edit_predictions": {
     "disabled_globs": [".env", "**/*.md"]
   },
@@ -93,6 +105,31 @@
       "projects": [
         {
           "paths": [
+            "~/dev/assert_fs"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/camino-assert-fs"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/camino-assert-fs-old"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/camino-fs-asserts"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/camino-tempfile"
+          ]
+        },
+        {
+          "paths": [
             "~/dev/cargo-sync-rdme"
           ]
         },
@@ -153,7 +190,17 @@
         },
         {
           "paths": [
+            "~/dev/nextest-rs/nextest-issue-2295"
+          ]
+        },
+        {
+          "paths": [
             "~/dev/nextest-rs/quick-junit"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/owo-colors"
           ]
         },
         {
@@ -183,7 +230,17 @@
         },
         {
           "paths": [
+            "~/dev/oxide/expectorate"
+          ]
+        },
+        {
+          "paths": [
             "~/dev/oxide/falcon"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/oxide/id-map"
           ]
         },
         {
@@ -214,6 +271,11 @@
         {
           "paths": [
             "~/dev/oxide/rfd"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/oxide/steno"
           ]
         },
         {
@@ -249,6 +311,16 @@
         {
           "paths": [
             "~/dev/tishy"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/tmp/nextest-2295"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/tmp/nextest-2295/Cargo.toml"
           ]
         },
         {
