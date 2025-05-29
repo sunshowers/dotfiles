@@ -19,6 +19,7 @@
         "editor::MoveToBeginningOfLine",
         { "stop_at_soft_wraps": true, "stop_at_indent": true }
       ],
+      "f4": "editor::RunFlycheck",
       "ctrl-e": "editor::MoveToEndOfLine",
       "alt-f": "editor::MoveToNextWordEnd",
       "alt-b": "editor::MoveToPreviousWordStart",

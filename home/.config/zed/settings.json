@@ -30,10 +30,16 @@
       "show_edit_predictions": false
     }
   },
-  "assistant": {
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
+    },
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-sonnet-4-latest"
     },
     "version": "2"
   },
@@ -61,25 +67,6 @@
       "binary": {
         "ignore_system_version": true
       }
-    },
-    "initialization_options": {
-      "references": {
-        "excludeImports": true
-      },
-      "cachePriming": {
-        "enable": true
-      },
-      "completion": {
-        "privateEditable": {
-          "enable": true
-        }
-      },
-      "diagnostics": {
-        "enable": false,
-        "experimental": {
-          "enable": false
-        }
-      }
     }
   },
   "use_system_path_prompts": false,
@@ -89,14 +76,10 @@
       "host": "sunshowers-illumos.echoes",
       "projects": [
         {
-          "paths": [
-            "~/dev"
-          ]
+          "paths": ["~/dev"]
         },
         {
-          "paths": [
-            "~/dev/oxide/omicron"
-          ]
+          "paths": ["~/dev/oxide/omicron"]
         }
       ]
     },
@@ -104,234 +87,145 @@
       "host": "sunshowers-linux-dev",
       "projects": [
         {
-          "paths": [
-            "~/dev/assert_fs"
-          ]
+          "paths": ["/home/rain/dev/camino"]
         },
         {
-          "paths": [
-            "~/dev/camino-assert-fs"
-          ]
+          "paths": ["~/dev/assert_fs"]
         },
         {
-          "paths": [
-            "~/dev/camino-assert-fs-old"
-          ]
+          "paths": ["~/dev/camino-assert-fs"]
         },
         {
-          "paths": [
-            "~/dev/camino-fs-asserts"
-          ]
+          "paths": ["~/dev/camino-assert-fs-old"]
         },
         {
-          "paths": [
-            "~/dev/camino-tempfile"
-          ]
+          "paths": ["~/dev/camino-fs-asserts"]
         },
         {
-          "paths": [
-            "~/dev/cargo-sync-rdme"
-          ]
+          "paths": ["~/dev/camino-tempfile"]
         },
         {
-          "paths": [
-            "~/dev/cfg-expr"
-          ]
+          "paths": ["~/dev/cargo-sync-rdme"]
         },
         {
-          "paths": [
-            "~/dev/config-rs"
-          ]
+          "paths": ["~/dev/cfg-expr"]
         },
         {
-          "paths": [
-            "~/dev/cyclonedx-rust-cargo"
-          ]
+          "paths": ["~/dev/config-rs"]
         },
         {
-          "paths": [
-            "~/dev/guppy"
-          ]
+          "paths": ["~/dev/cyclonedx-rust-cargo"]
         },
         {
-          "paths": [
-            "~/dev/indent-write"
-          ]
+          "paths": ["~/dev/guppy"]
         },
         {
-          "paths": [
-            "~/dev/ipc-channel"
-          ]
+          "paths": ["~/dev/indent-write"]
         },
         {
-          "paths": [
-            "~/dev/libc"
-          ]
+          "paths": ["~/dev/ipc-channel"]
         },
         {
-          "paths": [
-            "~/dev/nextest-rs/datatest-stable"
-          ]
+          "paths": ["~/dev/libc"]
         },
         {
-          "paths": [
-            "~/dev/nextest-rs/future-queue"
-          ]
+          "paths": ["~/dev/nextest-rs/datatest-stable"]
         },
         {
-          "paths": [
-            "~/dev/nextest-rs/mukti"
-          ]
+          "paths": ["~/dev/nextest-rs/future-queue"]
         },
         {
-          "paths": [
-            "~/dev/nextest-rs/nextest"
-          ]
+          "paths": ["~/dev/nextest-rs/mukti"]
         },
         {
-          "paths": [
-            "~/dev/nextest-rs/nextest-issue-2295"
-          ]
+          "paths": ["~/dev/nextest-rs/nextest"]
         },
         {
-          "paths": [
-            "~/dev/nextest-rs/quick-junit"
-          ]
+          "paths": ["~/dev/nextest-rs/nextest-issue-2295"]
         },
         {
-          "paths": [
-            "~/dev/owo-colors"
-          ]
+          "paths": ["~/dev/nextest-rs/quick-junit"]
         },
         {
-          "paths": [
-            "~/dev/oxide"
-          ]
+          "paths": ["~/dev/owo-colors"]
         },
         {
-          "paths": [
-            "~/dev/oxide/crucible"
-          ]
+          "paths": ["~/dev/oxide"]
         },
         {
-          "paths": [
-            "~/dev/oxide/cyclonedx-rust-cargo"
-          ]
+          "paths": ["~/dev/oxide/crucible"]
         },
         {
-          "paths": [
-            "~/dev/oxide/daft"
-          ]
+          "paths": ["~/dev/oxide/cyclonedx-rust-cargo"]
         },
         {
-          "paths": [
-            "~/dev/oxide/dropshot"
-          ]
+          "paths": ["~/dev/oxide/daft"]
         },
         {
-          "paths": [
-            "~/dev/oxide/expectorate"
-          ]
+          "paths": ["~/dev/oxide/dropshot"]
         },
         {
-          "paths": [
-            "~/dev/oxide/falcon"
-          ]
+          "paths": ["~/dev/oxide/expectorate"]
         },
         {
-          "paths": [
-            "~/dev/oxide/id-map"
-          ]
+          "paths": ["~/dev/oxide/falcon"]
         },
         {
-          "paths": [
-            "~/dev/oxide/newtype-uuid"
-          ]
+          "paths": ["~/dev/oxide/id-map"]
         },
         {
-          "paths": [
-            "~/dev/oxide/omicron"
-          ]
+          "paths": ["~/dev/oxide/newtype-uuid"]
         },
         {
-          "paths": [
-            "~/dev/oxide/omicron-package"
-          ]
+          "paths": ["~/dev/oxide/omicron"]
         },
         {
-          "paths": [
-            "~/dev/oxide/progenitor"
-          ]
+          "paths": ["~/dev/oxide/omicron-package"]
         },
         {
-          "paths": [
-            "~/dev/oxide/propolis"
-          ]
+          "paths": ["~/dev/oxide/progenitor"]
         },
         {
-          "paths": [
-            "~/dev/oxide/rfd"
-          ]
+          "paths": ["~/dev/oxide/propolis"]
         },
         {
-          "paths": [
-            "~/dev/oxide/steno"
-          ]
+          "paths": ["~/dev/oxide/rfd"]
         },
         {
-          "paths": [
-            "~/dev/oxide/tufaceous"
-          ]
+          "paths": ["~/dev/oxide/steno"]
         },
         {
-          "paths": [
-            "~/dev/paths0"
-          ]
+          "paths": ["~/dev/oxide/tufaceous"]
         },
         {
-          "paths": [
-            "~/dev/pbt-examples"
-          ]
+          "paths": ["~/dev/paths0"]
         },
         {
-          "paths": [
-            "~/dev/proptest-shrink-tests"
-          ]
+          "paths": ["~/dev/pbt-examples"]
         },
         {
-          "paths": [
-            "~/dev/spr"
-          ]
+          "paths": ["~/dev/proptest-shrink-tests"]
         },
         {
-          "paths": [
-            "~/dev/sunshowers-io"
-          ]
+          "paths": ["~/dev/spr"]
         },
         {
-          "paths": [
-            "~/dev/tishy"
-          ]
+          "paths": ["~/dev/sunshowers-io"]
         },
         {
-          "paths": [
-            "~/dev/tmp/nextest-2295"
-          ]
+          "paths": ["~/dev/tishy"]
         },
         {
-          "paths": [
-            "~/dev/tmp/nextest-2295/Cargo.toml"
-          ]
+          "paths": ["~/dev/tmp/nextest-2295"]
         },
         {
-          "paths": [
-            "~/dev/tokio"
-          ]
+          "paths": ["~/dev/tmp/nextest-2295/Cargo.toml"]
         },
         {
-          "paths": [
-            "~/dev/wasmtime"
-          ]
+          "paths": ["~/dev/tokio"]
+        },
+        {
+          "paths": ["~/dev/wasmtime"]
         }
       ]
     }
