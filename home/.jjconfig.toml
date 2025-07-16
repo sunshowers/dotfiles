@@ -55,10 +55,3 @@ log = 'builtin_log_comfortable'
 --when.repositories = ["~/dev/oxide"]
 [--scope.user]
 email = "rain@oxide.computer"
-
-[merge-tools.mergiraf]
-# https://github.com/jj-vcs/jj/blob/b15769448b1e108aef64cb64c8495562db2298f1/cli/src/config/merge_tools.toml#L38-L44
-# this config can go away with jj 0.27
-program = "mergiraf"
-merge-args = ["merge", "$base", "$left", "$right", "-o", "$output", "-l", "$marker_length", "--fast"]
-merge-conflict-exit-codes = [1]

@@ -87,7 +87,7 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=black,bold,bg=red')
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-export PATH=$HOME/.cargo/bin:/opt/cargo/bin:$HOME/.cabal/bin:$HOME/go/bin:$HOME/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:/opt/cargo/bin:$HOME/.cabal/bin:$HOME/go/bin:$HOME/.local/bin:$PATH
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
 
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then

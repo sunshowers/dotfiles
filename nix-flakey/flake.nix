@@ -42,6 +42,7 @@
             carapace
             cosign
             direnv
+            fish
             gh
             git
             gitsign

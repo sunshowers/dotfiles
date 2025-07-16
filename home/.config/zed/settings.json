@@ -35,11 +35,11 @@
     "default_profile": "write",
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-sonnet-4"
     },
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4"
     },
     "version": "2"
   },
@@ -57,7 +57,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruvbox Dark Hard"
+    "dark": "Catppuccin Mocha"
   },
   "tab_bar": {
     "show": false
@@ -76,10 +76,14 @@
       "host": "sunshowers-illumos.echoes",
       "projects": [
         {
-          "paths": ["~/dev"]
+          "paths": [
+            "~/dev"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/omicron"]
+          "paths": [
+            "~/dev/oxide/omicron"
+          ]
         }
       ]
     },
@@ -87,145 +91,269 @@
       "host": "sunshowers-linux-dev",
       "projects": [
         {
-          "paths": ["/home/rain/dev/camino"]
+          "paths": [
+            "/home/rain/dev/async-scoped"
+          ]
         },
         {
-          "paths": ["~/dev/assert_fs"]
+          "paths": [
+            "/home/rain/dev/camino"
+          ]
         },
         {
-          "paths": ["~/dev/camino-assert-fs"]
+          "paths": [
+            "/home/rain/dev/nextest-rs/test-cargo-stress"
+          ]
         },
         {
-          "paths": ["~/dev/camino-assert-fs-old"]
+          "paths": [
+            "/home/rain/dev/nextest-rs/test-cargo-stress/Cargo.toml"
+          ]
         },
         {
-          "paths": ["~/dev/camino-fs-asserts"]
+          "paths": [
+            "/home/rain/dev/oxide/rackletteadm"
+          ]
         },
         {
-          "paths": ["~/dev/camino-tempfile"]
+          "paths": [
+            "/home/rain/dev/oxide/renovate-config"
+          ]
         },
         {
-          "paths": ["~/dev/cargo-sync-rdme"]
+          "paths": [
+            "/home/rain/dev/wezterm"
+          ]
         },
         {
-          "paths": ["~/dev/cfg-expr"]
+          "paths": [
+            "~/dev/assert_fs"
+          ]
         },
         {
-          "paths": ["~/dev/config-rs"]
+          "paths": [
+            "~/dev/camino-assert-fs"
+          ]
         },
         {
-          "paths": ["~/dev/cyclonedx-rust-cargo"]
+          "paths": [
+            "~/dev/camino-assert-fs-old"
+          ]
         },
         {
-          "paths": ["~/dev/guppy"]
+          "paths": [
+            "~/dev/camino-fs-asserts"
+          ]
         },
         {
-          "paths": ["~/dev/indent-write"]
+          "paths": [
+            "~/dev/camino-tempfile"
+          ]
         },
         {
-          "paths": ["~/dev/ipc-channel"]
+          "paths": [
+            "~/dev/cargo-sync-rdme"
+          ]
         },
         {
-          "paths": ["~/dev/libc"]
+          "paths": [
+            "~/dev/cfg-expr"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/datatest-stable"]
+          "paths": [
+            "~/dev/config-rs"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/future-queue"]
+          "paths": [
+            "~/dev/cyclonedx-rust-cargo"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/mukti"]
+          "paths": [
+            "~/dev/guppy"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/nextest"]
+          "paths": [
+            "~/dev/indent-write"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/nextest-issue-2295"]
+          "paths": [
+            "~/dev/ipc-channel"
+          ]
         },
         {
-          "paths": ["~/dev/nextest-rs/quick-junit"]
+          "paths": [
+            "~/dev/libc"
+          ]
         },
         {
-          "paths": ["~/dev/owo-colors"]
+          "paths": [
+            "~/dev/nextest-rs/datatest-stable"
+          ]
         },
         {
-          "paths": ["~/dev/oxide"]
+          "paths": [
+            "~/dev/nextest-rs/future-queue"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/crucible"]
+          "paths": [
+            "~/dev/nextest-rs/mukti"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/cyclonedx-rust-cargo"]
+          "paths": [
+            "~/dev/nextest-rs/nextest"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/daft"]
+          "paths": [
+            "~/dev/nextest-rs/nextest-issue-2295"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/dropshot"]
+          "paths": [
+            "~/dev/nextest-rs/quick-junit"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/expectorate"]
+          "paths": [
+            "~/dev/owo-colors"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/falcon"]
+          "paths": [
+            "~/dev/oxide"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/id-map"]
+          "paths": [
+            "~/dev/oxide/crucible"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/newtype-uuid"]
+          "paths": [
+            "~/dev/oxide/cyclonedx-rust-cargo"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/omicron"]
+          "paths": [
+            "~/dev/oxide/daft"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/omicron-package"]
+          "paths": [
+            "~/dev/oxide/dropshot"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/progenitor"]
+          "paths": [
+            "~/dev/oxide/expectorate"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/propolis"]
+          "paths": [
+            "~/dev/oxide/falcon"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/rfd"]
+          "paths": [
+            "~/dev/oxide/id-map"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/steno"]
+          "paths": [
+            "~/dev/oxide/newtype-uuid"
+          ]
         },
         {
-          "paths": ["~/dev/oxide/tufaceous"]
+          "paths": [
+            "~/dev/oxide/omicron"
+          ]
         },
         {
-          "paths": ["~/dev/paths0"]
+          "paths": [
+            "~/dev/oxide/omicron-package"
+          ]
         },
         {
-          "paths": ["~/dev/pbt-examples"]
+          "paths": [
+            "~/dev/oxide/progenitor"
+          ]
         },
         {
-          "paths": ["~/dev/proptest-shrink-tests"]
+          "paths": [
+            "~/dev/oxide/propolis"
+          ]
         },
         {
-          "paths": ["~/dev/spr"]
+          "paths": [
+            "~/dev/oxide/rfd"
+          ]
         },
         {
-          "paths": ["~/dev/sunshowers-io"]
+          "paths": [
+            "~/dev/oxide/steno"
+          ]
         },
         {
-          "paths": ["~/dev/tishy"]
+          "paths": [
+            "~/dev/oxide/tufaceous"
+          ]
         },
         {
-          "paths": ["~/dev/tmp/nextest-2295"]
+          "paths": [
+            "~/dev/paths0"
+          ]
         },
         {
-          "paths": ["~/dev/tmp/nextest-2295/Cargo.toml"]
+          "paths": [
+            "~/dev/pbt-examples"
+          ]
         },
         {
-          "paths": ["~/dev/tokio"]
+          "paths": [
+            "~/dev/proptest-shrink-tests"
+          ]
         },
         {
-          "paths": ["~/dev/wasmtime"]
+          "paths": [
+            "~/dev/spr"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/sunshowers-io"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/tishy"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/tmp/nextest-2295"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/tmp/nextest-2295/Cargo.toml"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/tokio"
+          ]
+        },
+        {
+          "paths": [
+            "~/dev/wasmtime"
+          ]
         }
       ]
     }
