@@ -123,5 +123,3 @@ fi
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-</content>
-</invoke>
