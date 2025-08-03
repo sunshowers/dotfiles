@@ -1,0 +1,14 @@
+# yabai config
+# https://github.com/koekeishiya/yabai/wiki/Configuration
+
+# bsp layout
+yabai -m config layout bsp
+
+# focus follows mouse (hold down mouse_modifier to disable)
+yabai -m config focus_follows_mouse autoraise
+
+# window shadows only for floats
+yabai -m config window_shadow float
+
+# float system preferences
+yabai -m rule --add app="^System Preferences$" manage=off

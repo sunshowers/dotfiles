@@ -1,0 +1,45 @@
+[user]
+	email = rain@sunshowers.io
+	name = Rain
+[alias]
+	st = status
+	r = !git rebase -i $(__detect_git_base)
+	pr = !git fetch origin && git rebase $(__detect_git_base)
+	aa = commit --amend -a --no-edit
+	a = commit --amend
+	rc = rebase --continue
+	rx = rebase -x
+	rxf = rebase -x cargo xfmt
+	ce = commit --allow-empty -m \"Empty commit\"
+	c = commit
+	redate = !env EDITOR=true git rebase -i -x 'git commit --amend --reset-author' $(__detect_git_base)
+[include]
+    path = ~/.gitconfig.local
+[includeIf "gitdir:~/dev/oxide/"]
+    path = ~/.gitconfig.oxide
+[core]
+	excludesFile = "~/.gitignore-home"
+[init]
+	defaultBranch = main
+[safe]
+	directory = /home/rain/dev/mold
+[tag]
+	gpgsign = true
+[gpg "x509"]
+	program = gitsign
+[gpg]
+	format = x509
+[gitsign]
+	connectorID = https://github.com/login/oauth
+[rebase]
+	updateRefs = true
+[spr]
+	branchPrefix = sunshowers/spr/
+	requireTestPlan = false
+[credential]
+	helper = "!f() { /home/rain/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/node /tmp/vscode-remote-containers-14ce3cbc-baf5-4db6-9988-b1aa326316fd.js git-credential-helper $*; }; f"
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[merge "mergiraf"]
+    name = mergiraf
+    driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L

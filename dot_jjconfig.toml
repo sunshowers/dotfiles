@@ -1,0 +1,57 @@
+[user]
+name = "Rain"
+email = "rain@sunshowers.io"
+
+[ui]
+default-command = "log"
+#default-command = "sl"
+#diff.tool = ["difft", "--color=always", "$left", "$right"]
+
+[git]
+write-change-id-header = true
+
+[aliases]
+a = ["describe", "@-"]
+aa = ["amend"]
+bc = ["bookmark", "create", "-r", "@-"]
+bd = ["bookmark", "delete"]
+bs = ["bookmark", "set", "-r", "@-"]
+bt = ["bookmark", "track"]
+gf = ["git", "fetch"]
+gfm = ["git", "fetch", "--remote", "mine"]
+gfmc = ["util", "exec", "--", "sh", "-c", "jj git fetch --remote mine && jj new $1@mine", ""]
+gp = ["git", "push"]
+gpn = ["git", "push", "--allow-new"]
+gpm = ["git", "push", "--remote", "mine"]
+gpmn = ["git", "push", "--remote", "mine", "--allow-new"]
+n = ["next"]
+p = ["prev"]
+r = ["rebase", "-d", "trunk()", "--skip-emptied"]
+s = ["show", "@-"]
+sl = ["log", "-r", "open()"]
+slog = ["log", "-r", "open()", "-T", "builtin_log_detailed"]
+sq = ["squash"]
+"sq-" = ["squash", "-r", "@-"]
+
+[revsets]
+#log = 'open()'
+
+[revset-aliases]
+# See https://github.com/martinvonz/jj/blob/main/docs/revsets.md
+'uninterested()' = '::remote_bookmarks() | tags()'
+'spr_branches()' = 'remote_bookmarks(glob:"sunshowers/spr/*")'
+'mine()' = 'author("rain@") | author("rain1@")'
+'interested()' = 'mine() ~ uninterested()'
+'open()' = '''
+    ancestors(interested(), 3)
+      | tracked_remote_bookmarks()
+      | ancestors(@, 3)
+'''
+
+[templates]
+log = 'builtin_log_comfortable'
+
+[[--scope]]
+--when.repositories = ["~/dev/oxide"]
+[--scope.user]
+email = "rain@oxide.computer"

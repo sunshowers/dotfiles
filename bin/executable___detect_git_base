@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+if git rev-parse --verify --quiet origin/main > /dev/null; then
+       echo "origin/main"
+else
+       echo "origin/master"
+fi

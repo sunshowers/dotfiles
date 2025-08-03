@@ -1,0 +1,6 @@
+# gitignore stuff configured for all repos
+
+/.idea/
+/.vscode/
+/.raintmp/
+/.zed/

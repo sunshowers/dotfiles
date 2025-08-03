@@ -1,0 +1,17 @@
+# chezmoi configuration file
+# See https://www.chezmoi.io/reference/configuration-file/
+
+[data]
+    email = "{{ .email }}"
+    name = "{{ .name }}"
+
+[diff]
+    exclude = ["scripts"]
+
+[merge]
+    tool = "vimdiff"
+
+encryption = "age"
+[age]
+    identity = "{{ -onePasswordDocument 'bhfd7zhvg3r3zcri3p7tn6dlbi' }}"
+    recipient = "age12n3jwh7qfsrjrflu5cepm40lfsaml49ygnktvthy9nvj2trw4qwsd5d2fr"
