@@ -68,7 +68,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 function _sourcebk() {
 	# Source the helper script from the chezmoi source directory
 	local chezmoi_source="$(chezmoi source-path)"
-	local bk="$chezmoi_source/bk/$1"
+	local bk="$chezmoi_source/.bk/$1"
 	if [[ -f "$bk" ]]; then
 		source "$bk"
 	fi
