@@ -12,7 +12,7 @@ write-change-id-header = true
 
 [aliases]
 a = ["describe", "@-"]
-aa = ["amend"]
+aa = ["squash"]
 bc = ["bookmark", "create", "-r", "@-"]
 bd = ["bookmark", "delete"]
 bs = ["bookmark", "set", "-r", "@-"]

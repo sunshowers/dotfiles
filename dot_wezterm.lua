@@ -181,4 +181,8 @@ end
 
 distrobox.apply_to_config(config)
 
+config.keys = {
+  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
+}
+
 return config;
