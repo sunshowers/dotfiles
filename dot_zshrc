@@ -85,7 +85,9 @@ function _sourcebk() {
 
 _sourcebk zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 _sourcebk zsh-history-substring-search.zsh
-_sourcebk wezterm.sh
+if [[ "$TERM_PROGRAM" == "WezTerm" ]]; then
+    _sourcebk wezterm.sh
+fi
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)
 typeset -A ZSH_HIGHLIGHT_PATTERNS
@@ -126,3 +128,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # local overrides (MUST BE AT THE END)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+. "$HOME/.local/share/../bin/env"
+eval "$(starship init zsh)"
