@@ -9,31 +9,16 @@
     flakey-profile.url = "github:lf-/flakey-profile";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    jj-starship.url = "github:dmmulroy/jj-starship";
   };
 
-  outputs = { self, nixpkgs, flake-utils, flakey-profile }:
+  outputs = { self, nixpkgs, flake-utils, flakey-profile, jj-starship }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
-            (final: prev: {
-              go_1_25_3 = prev.go_1_25.overrideAttrs (finalAttrs: prevAttrs: {
-                version = "1.25.3";
-                src = final.fetchurl {
-                  url = "https://go.dev/dl/go${finalAttrs.version}.src.tar.gz";
-                  hash = "sha256-qBpLpZPQAV4QxR4mfeP/B8eskU38oDfZUX0ClRcJd5U=";
-                };
-              });
-
-              buildGo1253Module = prev.buildGoModule.override {
-                go = final.go_1_25_3;
-              };
-
-              cosign = prev.cosign.override {
-                buildGoModule = final.buildGo1253Module;
-              };
-            })
+            jj-starship.overlays.default
           ];
         };
       in
@@ -58,6 +43,7 @@
           paths = with pkgs; [
             age
             aria2
+            asciidoctor
             atuin
             carapace
             chezmoi
@@ -85,9 +71,15 @@
             python311Packages.fonttools
             python312Packages.git-filter-repo
             ripgrep
+            starship
+            jj-starship
             step-cli
+            tokei
             uv
+            vale
             wget2
+            zellij
+            zig
           ];
         };
       });
